@@ -6,8 +6,14 @@
 module.exports = {
 
   development: {
-    client: 'pg',
-    connection: 'postgres://postgres:docker@172.17.0.2:5432/pg-docker'
+    client: 'postgresgl',
+    connection: {
+      host: '127.0.0.1',
+      password: 'docker',
+      user: 'postgres',
+      port: 5432,
+      database: 'disney_faries'
+    }
   
     
   },

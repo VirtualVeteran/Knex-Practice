@@ -2,7 +2,7 @@
 const express = require('express');
 
 const app = express();
-const port = 8081;
+const port = 3000;
 
 const knex = require('knex')(require('../knexfile.js')["development"]);
 
@@ -23,3 +23,5 @@ app.get('/fairys', (request, response) => {
             response.json(fairyNames);
         })
 })
+
+module.exports = app;
